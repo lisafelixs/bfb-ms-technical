@@ -29,8 +29,8 @@ public class TechnicalServiceImpl implements TechnicalService {
             responseDto.setName(technical.getName());
             responseDto.setEmail(technical.getEmail());
             responseDto.setDocumentNumber(technical.getDocumentNumber());
-            responseDto.setPhoneDDD(technical.getPhoneDDD());
-            responseDto.setPhoneNumber(technical.getPhoneNumber());
+            responseDto.setPhoneDDD(technical.getPhoneDDD()!=null ? technical.getPhoneDDD() : "");
+            responseDto.setPhoneNumber(technical.getPhoneNumber()!=null ? technical.getPhoneNumber() : "");
             responseDto.setStatus(technical.getStatus());
             return ResponseEntity.ok(responseDto);
         }
